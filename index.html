@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Fitness | Kothalawala, Kaduwela – Concept Demo</title>
+  <meta name="description" content="Dream Fitness – 101/A/3 New Kandy Road, Viharamawatha Junction, Kothalawala, Kaduwela. Open Monday to Saturday, 6 AM to 10 PM. Coaching for fat loss, muscle and fitness since 2018.">
+  <!-- Demo only: stops Google from listing this page. REMOVE when the real site goes live. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sun: #ffb400;
+      --orange: #ff7a00;
+      --deep: #e05500;
+      --grey: #50545c;
+      --cream: #fffaf1;
+      --sand: #fff1d9;
+      --ink: #1f1d1a;
+      --muted: #77716a;
+      --line: #f1e3c8;
+    }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    @supports (overflow: clip) { html, body { overflow-x: clip; } }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+    h1, h2, h3, h4, h5 { font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--ink); letter-spacing: -.5px; }
+    section { padding: 96px 0; }
+    .muted { color: var(--muted); }
+    .grad { background: linear-gradient(90deg, var(--sun), var(--orange)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; background: var(--sand); color: var(--deep); border-radius: 30px; padding: 6px 14px; font-weight: 700; font-size: .82rem; }
+    .title { font-size: clamp(2.1rem, 5vw, 3.4rem); line-height: 1.08; }
+    @media (max-width: 575px) { .row.g-5 { --bs-gutter-x: 1.5rem; --gx: 1.5rem; margin-left: -.75rem; margin-right: -.75rem; } .row.g-5 > * { padding-left: .75rem; padding-right: .75rem; } }
+
+    .demo-line { background: linear-gradient(90deg, var(--sun), var(--orange)); color: var(--ink); text-align: center; font-size: .8rem; padding: 6px; font-weight: 700; }
+
+    /* Nav */
+    .navbar { background: rgba(255,250,241,.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+    .navbar-brand { display: flex; align-items: center; gap: 10px; font-family: 'Outfit'; font-weight: 900; color: var(--ink) !important; letter-spacing: .5px; }
+    .navbar-brand img { width: 46px; height: 46px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 2px var(--line); }
+    .navbar-brand span span { color: var(--orange); }
+    .navbar .nav-link { color: var(--ink) !important; font-weight: 500; }
+    .navbar .nav-link:hover { color: var(--orange) !important; }
+
+    .btn-sun { background: linear-gradient(135deg, var(--sun), var(--orange)); color: var(--ink); border: 0; border-radius: 50px; padding: 13px 28px; font-weight: 800; box-shadow: 0 12px 26px rgba(255,122,0,.3); }
+    .btn-sun:hover { filter: brightness(1.05); color: var(--ink); }
+    .btn-dark3 { background: var(--ink); color: #fff; border: 0; border-radius: 50px; padding: 13px 28px; font-weight: 700; }
+    .btn-dark3:hover { background: #000; color: #fff; }
+    .btn-line { background: transparent; color: var(--ink); border: 2px solid var(--ink); border-radius: 50px; padding: 11px 24px; font-weight: 700; }
+    .btn-line:hover { background: var(--ink); color: #fff; }
+
+    /* Hero: rising sun */
+    .hero { position: relative; overflow: hidden; padding: 70px 0 110px; }
+    .sunrise { position: absolute; right: -10%; top: 50%; width: 760px; height: 760px; border-radius: 50%; transform: translateY(-40%);
+      background: radial-gradient(circle, #ffd35a 0 28%, rgba(255,180,0,.45) 29% 42%, rgba(255,122,0,.18) 43% 58%, rgba(255,122,0,.07) 59% 72%, transparent 73%); animation: rise 6s ease-in-out infinite alternate; }
+    @keyframes rise { to { transform: translateY(-44%) scale(1.03); } }
+    .hero .container { position: relative; }
+    .hero h1 { font-size: clamp(2.8rem, 7vw, 5.4rem); line-height: 1; }
+    .hero-img { aspect-ratio: 4/5; max-width: 400px; margin: 0 auto; border-radius: 200px 200px 30px 30px; background: linear-gradient(180deg, #fff, var(--sand)); border: 6px solid #fff; box-shadow: 0 30px 60px rgba(224,85,0,.2); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .hero-img img { width: 80%; border-radius: 50%; }
+    @media (max-width: 991px) { .hero-img { max-width: 260px; } .sunrise { width: 520px; height: 520px; right: -40%; } .facts { gap: 20px; } }
+    .hero-img.has-img img { display: none; }
+    .live { display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--line); border-radius: 40px; padding: 8px 16px; font-weight: 700; font-size: .9rem; box-shadow: 0 8px 20px rgba(0,0,0,.05); }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,.2); }
+    .dot.closed { background: #ef4444; box-shadow: 0 0 0 4px rgba(239,68,68,.2); }
+    .facts { display: flex; flex-wrap: wrap; gap: 30px; margin-top: 34px; }
+    .facts b { font-family: 'Outfit'; font-size: 2.1rem; font-weight: 900; display: block; line-height: 1; }
+    .facts span { font-size: .85rem; color: var(--muted); }
+
+    /* Programs */
+    .prog { background: #fff; border-radius: 26px; padding: 30px; height: 100%; border: 1px solid var(--line); transition: .25s; position: relative; overflow: hidden; }
+    .prog::after { content: ''; position: absolute; right: -40px; top: -40px; width: 120px; height: 120px; border-radius: 50%; background: radial-gradient(circle, rgba(255,180,0,.35), transparent 70%); }
+    .prog:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(224,85,0,.12); }
+    .prog i { font-size: 2rem; color: var(--orange); }
+    .prog h4 { margin: 14px 0 6px; font-size: 1.35rem; }
+    .prog p { color: var(--muted); margin: 0; }
+
+    /* Dream planner */
+    .planner { background: var(--ink); color: #fff; border-radius: 34px; padding: 44px; position: relative; overflow: hidden; }
+    .planner::before { content: ''; position: absolute; left: -120px; bottom: -160px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(255,180,0,.35), transparent 70%); }
+    .planner h2, .planner h4 { color: #fff; }
+    .planner .lbl { font-size: .8rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #c8bfb2; margin-bottom: 10px; display: block; }
+    .seg { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; position: relative; }
+    .seg button { background: rgba(255,255,255,.07); border: 1.5px solid rgba(255,255,255,.18); color: #fff; border-radius: 50px; padding: 10px 18px; font-weight: 700; }
+    .seg button.on { background: linear-gradient(135deg, var(--sun), var(--orange)); border-color: transparent; color: var(--ink); }
+    .kg { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; position: relative; }
+    .kg input[type=range] { flex: 1; accent-color: var(--sun); }
+    .kg b { font-family: 'Outfit'; font-size: 2rem; min-width: 90px; }
+    .road { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 24px; padding: 26px; position: relative; height: 100%; }
+    .road .weeks { font-family: 'Outfit'; font-weight: 900; font-size: clamp(2.4rem, 6vw, 3.4rem); line-height: 1; }
+    .path { position: relative; margin: 26px 0 10px; padding-left: 30px; }
+    .path::before { content: ''; position: absolute; left: 9px; top: 6px; bottom: 6px; width: 3px; background: linear-gradient(180deg, var(--sun), var(--orange)); border-radius: 2px; }
+    .mile { position: relative; padding: 8px 0; }
+    .mile::before { content: ''; position: absolute; left: -27px; top: 14px; width: 15px; height: 15px; border-radius: 50%; background: var(--ink); border: 3px solid var(--sun); }
+    .mile.last::before { background: var(--sun); }
+    .mile b { color: #fff; }
+    .mile span { color: #c8bfb2; font-size: .9rem; margin-left: 8px; }
+    @media (max-width: 575px) { .planner { padding: 24px; } }
+
+    /* Hours */
+    .hours { background: #fff; border: 1px solid var(--line); border-radius: 26px; padding: 30px; }
+    .day { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+    .day.today { font-weight: 700; color: var(--deep); }
+    .day:last-child { border-bottom: 0; }
+
+    /* Gallery */
+    .ph { aspect-ratio: 1; border-radius: 26px; background: linear-gradient(160deg, var(--sand), #ffe2b0); background-size: cover; background-position: center; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--deep); font-size: .85rem; }
+    .ph i { font-size: 2rem; }
+    .has-img > i, .has-img > small { display: none; }
+
+    /* Contact */
+    .contact { background: var(--sand); }
+    .c-line { display: flex; gap: 14px; margin-bottom: 14px; }
+    .c-line i { color: var(--orange); font-size: 1.2rem; }
+    .c-line a { color: var(--ink); text-decoration: none; }
+    .map iframe { width: 100%; height: 100%; min-height: 340px; border: 0; border-radius: 26px; }
+
+    footer { background: var(--ink); color: #c8bfb2; padding: 26px 0; font-size: .88rem; }
+    footer img { width: 38px; height: 38px; border-radius: 50%; background: #fff; }
+
+    .call { position: fixed; right: 18px; bottom: 18px; width: 58px; height: 58px; border-radius: 50%; background: linear-gradient(135deg, var(--sun), var(--orange)); color: var(--ink); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; z-index: 999; box-shadow: 0 8px 22px rgba(255,122,0,.4); }
+    .call:hover { color: var(--ink); }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- DEMO NOTICE: remove after the owner approves -->
+  <div class="demo-line">Concept demo for Dream Fitness · photos are samples</div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home"><img src="logo.png" alt="Dream Fitness logo"><span>DREAM <span>FITNESS</span></span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#planner">Dream planner</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hours">Hours</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-sun btn-sm" href="tel:+94711564203"><i class="bi bi-telephone-fill me-1"></i> Call Now</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="home">
+    <div class="sunrise"></div>
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal">
+          <div class="live mb-4"><span class="dot" id="dot"></span><span id="liveText">Open now · until 10 PM</span></div>
+          <h1>Your dream body<br><span class="grad">starts today.</span></h1>
+          <p class="lead muted my-4" style="max-width:480px">Personal coaching, weights and cardio at Viharamawatha Junction, Kothalawala. Helping Kaduwela get fit since 2018.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#planner" class="btn btn-sun">Plan my dream goal</a>
+            <a href="tel:+94711564203" class="btn btn-line"><i class="bi bi-telephone me-2"></i>071 156 4203</a>
+          </div>
+          <div class="facts">
+            <div><b id="yrs">8</b><span>years in Kaduwela</span></div>
+            <div><b>5.5K+</b><span>Facebook followers</span></div>
+            <div><b>6–10</b><span>open Mon–Sat</span></div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal"><div class="hero-img" data-img="hero.jpg"><img src="logo.png" alt="Dream Fitness"></div></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PROGRAMS ===== -->
+  <section id="programs" class="pt-0">
+    <div class="container">
+      <div class="text-center mb-5 reveal"><span class="pill"><i class="bi bi-stars"></i>What we offer</span><h2 class="title mt-3">Every dream, <span class="grad">one gym</span></h2></div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 reveal"><div class="prog"><i class="bi bi-fire"></i><h4>Fat Loss</h4><p>Cardio and circuits with a coach to help you lose weight safely.</p></div></div>
+        <div class="col-md-6 col-lg-3 reveal"><div class="prog"><i class="bi bi-lightning-charge"></i><h4>Muscle Building</h4><p>Strength training with a plan that grows as you do.</p></div></div>
+        <div class="col-md-6 col-lg-3 reveal"><div class="prog"><i class="bi bi-person-check"></i><h4>Personal Coaching</h4><p>One-to-one guidance on form, workouts and food.</p></div></div>
+        <div class="col-md-6 col-lg-3 reveal"><div class="prog"><i class="bi bi-people"></i><h4>Men &amp; Women</h4><p>A friendly, respectful space for everyone, from beginners up.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DREAM PLANNER ===== -->
+  <section id="planner" class="pt-0">
+    <div class="container">
+      <div class="planner reveal">
+        <div class="row g-5">
+          <div class="col-lg-6 position-relative">
+            <span class="pill"><i class="bi bi-map"></i>Dream planner</span>
+            <h2 class="title mt-3 mb-4">From dream<br>to <span class="grad">done</span></h2>
+            <span class="lbl">My dream</span>
+            <div class="seg" id="goal"><button class="on" data-v="lose">Lose weight</button><button data-v="gain">Build muscle</button><button data-v="fit">Get fit &amp; strong</button></div>
+            <div id="kgWrap">
+              <span class="lbl" id="kgLbl">How many kg?</span>
+              <div class="kg"><input type="range" id="kg" min="2" max="30" value="8" oninput="plan()"><b id="kgVal">8 kg</b></div>
+            </div>
+            <span class="lbl">Training days a week</span>
+            <div class="seg" id="days"><button data-v="2">2</button><button class="on" data-v="3">3–4</button><button data-v="5">5+</button></div>
+          </div>
+          <div class="col-lg-6 position-relative">
+            <div class="road">
+              <span class="lbl mb-1">A healthy, realistic timeline</span>
+              <div class="weeks" id="weeks">16 weeks</div>
+              <div style="color:#c8bfb2" id="byDate">around March 2027</div>
+              <div class="path" id="path"></div>
+              <small style="color:#c8bfb2" class="d-block mb-3" id="note"></small>
+              <a id="start" href="#" target="_blank" class="btn btn-sun w-100"><i class="bi bi-whatsapp me-2"></i>Start my dream plan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOURS + GALLERY ===== -->
+  <section id="hours" class="pt-0">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-5 reveal">
+          <div class="hours h-100">
+            <span class="pill"><i class="bi bi-clock"></i>Opening hours</span>
+            <h3 class="mt-3 mb-3">Come train with us</h3>
+            <div id="week"></div>
+          </div>
+        </div>
+        <div class="col-lg-7 reveal">
+          <div class="row g-3 h-100">
+            <div class="col-6"><div class="ph" data-img="g1.jpg"><i class="bi bi-image"></i><small class="mt-2">Gym floor</small></div></div>
+            <div class="col-6"><div class="ph" data-img="g2.jpg"><i class="bi bi-image"></i><small class="mt-2">Weights</small></div></div>
+            <div class="col-6"><div class="ph" data-img="t1.jpg"><i class="bi bi-arrow-up-right-circle"></i><small class="mt-2">Transformation</small></div></div>
+            <div class="col-6"><div class="ph" data-img="g3.jpg"><i class="bi bi-image"></i><small class="mt-2">Members</small></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 reveal">
+          <span class="pill"><i class="bi bi-geo-alt"></i>Find us</span>
+          <h2 class="title mt-3 mb-4">Visit <span class="grad">Dream</span></h2>
+          <div class="c-line"><i class="bi bi-geo-alt-fill"></i><div>101/A/3, New Kandy Road,<br>Viharamawatha Junction, Kothalawala, Kaduwela</div></div>
+          <div class="c-line"><i class="bi bi-telephone-fill"></i><a href="tel:+94711564203">+94 71 156 4203</a></div>
+          <div class="c-line"><i class="bi bi-whatsapp"></i><a href="https://wa.me/94711564203" target="_blank">WhatsApp us</a></div>
+          <div class="c-line"><i class="bi bi-envelope-fill"></i><a href="mailto:dream.fitness1@gmail.com">dream.fitness1@gmail.com</a></div>
+          <div class="c-line"><i class="bi bi-facebook"></i><span>Dream fitness on Facebook</span></div>
+        </div>
+        <div class="col-lg-7 map reveal"><iframe src="https://maps.google.com/maps?q=Viharamawatha%20Junction%20Kothalawala%20Kaduwela&z=15&output=embed" loading="lazy" title="Map to Dream Fitness"></iframe></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <span class="d-flex align-items-center gap-2"><img src="logo.png" alt=""> <b class="text-white">Dream Fitness · Kaduwela</b></span>
+      <span>&copy; <span id="yr"></span> Dream Fitness</span>
+      <span>Website by Lowamina Pigera</span>
+    </div>
+  </footer>
+
+  <a href="tel:+94711564203" class="call" aria-label="Call Dream Fitness"><i class="bi bi-telephone-fill"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const WHATSAPP = '94711564203';
+    const wa = t => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(t)}`;
+    const now0 = new Date();
+    document.getElementById('yr').textContent = now0.getFullYear();
+    document.getElementById('yrs').textContent = now0.getFullYear() - 2018;
+
+    // ---- Opening hours (from the gym's post: Mon–Sat 6 AM – 10 PM; Sunday to be confirmed) ----
+    const HOURS = { 1: [6, 22], 2: [6, 22], 3: [6, 22], 4: [6, 22], 5: [6, 22], 6: [6, 22], 0: null };
+    const DAY = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    function lkNow() { return new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Colombo' })); }
+    function live() {
+      const n = lkNow(), h = n.getHours() + n.getMinutes() / 60, t = HOURS[n.getDay()];
+      const open = t && h >= t[0] && h < t[1];
+      document.getElementById('dot').classList.toggle('closed', !open);
+      document.getElementById('liveText').textContent = open ? 'Open now · until 10 PM' : (t && h < t[0] ? 'Closed · opens at 6 AM' : 'Closed now · see you at 6 AM');
+      const order = [1, 2, 3, 4, 5, 6, 0];
+      document.getElementById('week').innerHTML = order.map(d => `<div class="day${d === n.getDay() ? ' today' : ''}"><span>${DAY[d]}${d === n.getDay() ? ' (today)' : ''}</span><span>${HOURS[d] ? '6:00 AM – 10:00 PM' : 'To be confirmed'}</span></div>`).join('');
+    }
+    live(); setInterval(live, 60000);
+
+    // ---- Dream planner: healthy paces only ----
+    // Weight loss about 0.5 kg a week (0.75 with 5+ days, never more); muscle about 0.25 kg a week.
+    let goal = 'lose', days = '3';
+    ['goal', 'days'].forEach(g => document.querySelectorAll('#' + g + ' button').forEach(b => b.addEventListener('click', () => {
+      document.querySelectorAll('#' + g + ' button').forEach(x => x.classList.remove('on')); b.classList.add('on');
+      if (g === 'goal') { goal = b.dataset.v; setRange(); } else days = b.dataset.v;
+      plan();
+    })));
+    function setRange() {
+      const r = document.getElementById('kg');
+      document.getElementById('kgWrap').style.display = goal === 'fit' ? 'none' : '';
+      if (goal === 'lose') { r.min = 2; r.max = 30; r.value = 8; document.getElementById('kgLbl').textContent = 'How many kg to lose?'; }
+      if (goal === 'gain') { r.min = 1; r.max = 10; r.value = 4; document.getElementById('kgLbl').textContent = 'How many kg of muscle?'; }
+    }
+    function plan() {
+      const kg = +document.getElementById('kg').value;
+      document.getElementById('kgVal').textContent = kg + ' kg';
+      let weeks, miles, pace, note;
+      if (goal === 'lose') {
+        pace = days === '5' ? 0.75 : days === '3' ? 0.5 : 0.4;
+        weeks = Math.ceil(kg / pace);
+        miles = [0.25, 0.5, 0.75, 1].map(f => [Math.round(weeks * f), `−${Math.round(kg * f * 10) / 10} kg`]);
+        note = `About ${pace} kg a week: a safe pace that lasts. Food matters most, so ask your coach for guidance.`;
+      } else if (goal === 'gain') {
+        pace = days === '5' ? 0.25 : days === '3' ? 0.2 : 0.15;
+        weeks = Math.ceil(kg / pace);
+        miles = [0.25, 0.5, 0.75, 1].map(f => [Math.round(weeks * f), `+${Math.round(kg * f * 10) / 10} kg muscle`]);
+        note = `About ${pace} kg of muscle a week is realistic for beginners, with enough protein and sleep.`;
+      } else {
+        weeks = days === '2' ? 16 : 12;
+        miles = [[Math.round(weeks * .25), 'Learn the moves'], [Math.round(weeks * .5), 'More stamina'], [Math.round(weeks * .75), 'Stronger lifts'], [weeks, 'Fit & confident']];
+        note = 'A 3-stage plan: learn good form, build stamina, then get stronger.';
+      }
+      const end = lkNow(); end.setDate(end.getDate() + weeks * 7);
+      document.getElementById('weeks').textContent = `${weeks} weeks`;
+      document.getElementById('byDate').textContent = `around ${end.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })}`;
+      document.getElementById('path').innerHTML = miles.map((m, i) => `<div class="mile${i === 3 ? ' last' : ''}"><b>Week ${Math.max(1, m[0])}</b><span>${m[1]}</span></div>`).join('');
+      document.getElementById('note').textContent = note + ' Everyone is different, and with a medical condition, check with your doctor first.';
+      const goalText = goal === 'lose' ? `lose ${kg} kg` : goal === 'gain' ? `build ${kg} kg of muscle` : 'get fit and strong';
+      document.getElementById('start').href = wa(`Hi Dream Fitness! My dream is to ${goalText}. I can train ${days === '3' ? '3–4' : days === '5' ? '5+' : '2'} days a week. The website says about ${weeks} weeks. Can a coach help me start?`);
+    }
+    setRange(); plan();
+
+    // Photo slots: put photos in the "img" folder (see img/PHOTOS.txt) and they appear
+    document.querySelectorAll('[data-img]').forEach(el => {
+      const src = 'img/' + el.dataset.img, test = new Image();
+      test.onload = () => { el.style.backgroundImage = `url("${src}")`; el.classList.add('has-img'); };
+      test.src = src;
+    });
+
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }
+    }), { threshold: .1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
